@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/6 | Hexo</title>
+  <title>P12 虚函数与多态 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+  <meta name="description" content="P12 虚函数与多态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P12 虚函数与多态">
+<meta property="og:url" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="P12 虚函数与多态">
 <meta property="og:locale">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E8%99%9A%E5%87%BD%E6%95%B01.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E8%99%9A%E5%87%BD%E6%95%B02.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E7%9A%84%E6%9E%84%E9%80%A0.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF2.png">
+<meta property="article:published_time" content="2021-06-17T04:41:19.000Z">
+<meta property="article:modified_time" content="2021-06-17T06:50:15.234Z">
 <meta property="article:author" content="qiutongxue">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E8%99%9A%E5%87%BD%E6%95%B01.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,36 +165,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-P12-虚函数与多态" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      P12 虚函数与多态
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
+
+        
+        <a href="/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
   	<time datetime="2021-06-17T04:41:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/">P12 虚函数与多态</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P12-虚函数与多态"><a href="#P12-虚函数与多态" class="headerlink" title="P12 虚函数与多态"></a>P12 虚函数与多态</h1><span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
+<hr>
+<h2 id="1、虚函数virtual"><a href="#1、虚函数virtual" class="headerlink" title="1、虚函数virtual"></a>1、虚函数virtual</h2><p><strong>non-virtual函数</strong>：你不希望子类重新定义（override，覆写）它<br><strong>virtual函数</strong>：你希望子类重新定义（override，覆写）它，并且已有默认定义<br>p<strong>ure virtual函数</strong>：你希望子类<strong>一定</strong>要重新定义（override，覆写），你对它没有默认定义</p>
+<p>变量继承体现在<strong>内存</strong>，函数继承体现在<strong>调用权</strong>。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> <span class="keyword">const</span> </span>= <span class="number">0</span>;</span><br><span class="line">    <span class="comment">//pure virtual，每个形状必须定义自己的画图方式</span></span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">error</span><span class="params">(<span class="keyword">const</span> std::string&amp; msg)</span></span>;</span><br><span class="line">    <span class="comment">//inpure virtual，当画图出错时抛出错误信息，并且可以允许不同形状输出不同信息</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">objectID</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">    <span class="comment">//non-virtual，每个形状都有一个ID，没什么特别的</span></span><br><span class="line">    ...</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangel</span>:</span> <span class="keyword">public</span> Shape &#123;...&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ellipse</span>:</span> <span class="keyword">public</span> Shape &#123;...&#125;;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="1-1-inheritance-with-virtual"><a href="#1-1-inheritance-with-virtual" class="headerlink" title="1.1 inheritance with virtual"></a>1.1 inheritance with virtual</h3><p><strong>Template Method设计模式</strong>  ，即延缓定义  </p>
+<ul>
+<li><p>思想：父类先写好OnFileOpen()  ，但是其中Serialize()无法直接写好，因为针对不同文件，操作也许不同，所以需要将其设为虚函数，让子类覆写。  </p>
+</li>
+<li><p>程序运行过程：如灰色线所示，先定义myDoc，再运行OnFileOpen()，在运行的过程中发现Serialize()是虚函数需要覆写，<br>就到CMyDoc下去找Serialize()这个函数，然后继续执行OnFileOpen()。（通过子类的对象调用父类的函数）  </p>
+</li>
+</ul>
+<blockquote>
+<p>Serialize()之所以能找到右边是因为，myDoc调用OnFileOpen()，其实传了一个自身的地址，即OnFileOpen()中存在一个隐含的this指针，<br>那么Serialize()本质上是：this-&gt;Serialize(); 所以就知道是CMyDoc这个类的函数。  </p>
+</blockquote>
+<p><img src="%E8%99%9A%E5%87%BD%E6%95%B01.png" alt="虚函数1"></p>
+<p>完整模拟代码如下：<br><img src="%E8%99%9A%E5%87%BD%E6%95%B02.png" alt="虚函数2"></p>
+<hr>
+<h2 id="1-2-继承与复合下构造与析构"><a href="#1-2-继承与复合下构造与析构" class="headerlink" title="1.2 继承与复合下构造与析构"></a>1.2 继承与复合下构造与析构</h2><p>构造优先级：</p>
+<ol>
+<li>Base &gt; Component &gt; Derved</li>
+<li>Component &gt; Base &gt; Derved  </li>
+</ol>
+<p>析构优先级相反<br><img src="%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E7%9A%84%E6%9E%84%E9%80%A0.png" alt="继承与复合"></p>
+<hr>
+<h2 id="1-3-委托与继承"><a href="#1-3-委托与继承" class="headerlink" title="1.3 委托与继承"></a>1.3 委托与继承</h2><h3 id="1、Observer设计模式"><a href="#1、Observer设计模式" class="headerlink" title="1、Observer设计模式"></a>1、<strong>Observer设计模式</strong></h3><p>对于一个对象，有多种表现方式<br>通过委托，右边的数据可以被多个视图观察</p>
+<p><img src="%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF.png" alt="委托与继承"></p>
+<hr>
+<h3 id="2、Composite设计模式"><a href="#2、Composite设计模式" class="headerlink" title="2、Composite设计模式"></a>2、<strong>Composite设计模式</strong></h3><p>设想如下一种常见的情况：对于一个文件系统，一个目录下既有文件由又有目录，目录下同样如此，那么我们该如何设计一个类呢？  </p>
+<blockquote>
+<p>首先需要准备一个类，名为Primitive（表示基本的，不是组合物）；<br>另外准备一个类，名为Composite（表示组合物），它应该是一个容器，它应该即可以容纳Primitive又可以容纳Composite。<br>所以容纳的应该是一个父类，而且放的是指针，因为容器中放的对象大小应该相同。<br>同时应该设计一个add()函数，可以同时加Primitive和Composite，即让参数为一个指向父类的指针。</p>
+</blockquote>
+<p><img src="%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF2.png" alt="委托与继承2"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/微信支付.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,364 +266,118 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/17/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2021-06-17T03:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/06/17/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P11 组合与继承</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/17/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">P11 组合与继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">P12 虚函数与多态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0virtual"><span class="toc-number">1.1.</span> <span class="toc-text">1、虚函数virtual</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-inheritance-with-virtual"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 inheritance with virtual</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 继承与复合下构造与析构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 委托与继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Observer%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、Observer设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Composite%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、Composite设计模式</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/17/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/" class="archive-article-date">
-  	<time datetime="2021-06-16T16:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/17/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/">P10 扩展补充：模板类，函数模板，及其它</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/16/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2021-06-16T14:39:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/16/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">P9 复习String类的实现过程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/16/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="archive-article-date">
-  	<time datetime="2021-06-16T13:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/16/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">P8 堆、栈与内存管理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/16/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2021-06-16T11:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/16/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/">P7 三大函数：拷贝函数、拷贝复制、析构</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/16/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/" class="archive-article-date">
-  	<time datetime="2021-06-16T10:42:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/16/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/">complex.h源码与例子</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/15/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-06-15T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/15/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/">P5.操作符重载与临时对象</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/15/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-06-15T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/15/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/">P4参数传递与返回值</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/15/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-06-15T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/15/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">P3 构造函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2021/06/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/06/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -576,8 +401,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
