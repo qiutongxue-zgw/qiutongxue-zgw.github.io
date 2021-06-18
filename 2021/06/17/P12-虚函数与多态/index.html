@@ -20,8 +20,10 @@
 <meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E7%9A%84%E6%9E%84%E9%80%A0.png">
 <meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF.png">
 <meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF2.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/Prototype1.png">
+<meta property="og:image" content="http://example.com/2021/06/17/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/Prototype2.png">
 <meta property="article:published_time" content="2021-06-17T04:41:19.000Z">
-<meta property="article:modified_time" content="2021-06-17T06:50:15.234Z">
+<meta property="article:modified_time" content="2021-06-17T13:02:01.837Z">
 <meta property="article:author" content="qiutongxue">
 <meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
@@ -57,7 +59,7 @@
 			<img src="/assets/头像.jfif" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">qiutongxue</a></h1>
 		</hgroup>
 		
 
@@ -117,7 +119,7 @@
 				<img src="/assets/头像.jfif" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">qiutongxue</h1>
 			</hgroup>
 			
 			
@@ -221,6 +223,8 @@
 <p>首先需要准备一个类，名为Primitive（表示基本的，不是组合物）；<br>另外准备一个类，名为Composite（表示组合物），它应该是一个容器，它应该即可以容纳Primitive又可以容纳Composite。<br>所以容纳的应该是一个父类，而且放的是指针，因为容器中放的对象大小应该相同。<br>同时应该设计一个add()函数，可以同时加Primitive和Composite，即让参数为一个指向父类的指针。</p>
 </blockquote>
 <p><img src="%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF2.png" alt="委托与继承2"></p>
+<h3 id="3、Prototype设计模式"><a href="#3、Prototype设计模式" class="headerlink" title="3、Prototype设计模式"></a>3、<strong>Prototype设计模式</strong></h3><p>设想如下情况：现在需要一个树状继承体系，想要去创建未来才会出现的子类，应该如何处理呢？</p>
+<p>Prototype定义：用原型（Prototype）实例指定创建对象的种类，并通过拷贝这些原型创建新的对象。<br>模型图<br><img src="Prototype1.png" alt="Prototype1"><br>实例<br><img src="Prototype2.png" alt="Prototype2">  </p>
 
       
 
@@ -359,7 +363,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">P12 虚函数与多态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0virtual"><span class="toc-number">1.1.</span> <span class="toc-text">1、虚函数virtual</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-inheritance-with-virtual"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 inheritance with virtual</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 继承与复合下构造与析构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 委托与继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Observer%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、Observer设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Composite%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、Composite设计模式</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">P12 虚函数与多态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%99%9A%E5%87%BD%E6%95%B0virtual"><span class="toc-number">1.1.</span> <span class="toc-text">1、虚函数virtual</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-inheritance-with-virtual"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 inheritance with virtual</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%8D%E5%90%88%E4%B8%8B%E6%9E%84%E9%80%A0%E4%B8%8E%E6%9E%90%E6%9E%84"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 继承与复合下构造与析构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%A7%94%E6%89%98%E4%B8%8E%E7%BB%A7%E6%89%BF"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 委托与继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81Observer%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">1、Observer设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Composite%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.2.</span> <span class="toc-text">2、Composite设计模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81Prototype%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.3.</span> <span class="toc-text">3、Prototype设计模式</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
