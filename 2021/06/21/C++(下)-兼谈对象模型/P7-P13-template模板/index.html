@@ -6,20 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>P2 conversion function,转换函数 | Hexo</title>
+  <title>P7-P13 template模板 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="P2-conversion-function-转换函数">
+  <meta name="description" content="template模板">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P2 conversion function,转换函数">
-<meta property="og:url" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="P7-P13 template模板">
+<meta property="og:url" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P2-conversion-function-转换函数">
+<meta property="og:description" content="template模板">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-06-21T04:37:49.000Z">
-<meta property="article:modified_time" content="2021-06-21T05:15:03.309Z">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E7%B1%BB%E6%A8%A1%E6%9D%BF.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF1.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF2.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF3.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%A8%A1%E6%9D%BF%E7%89%B9%E5%8C%96.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E4%B8%AA%E6%95%B0%E5%81%8F%E7%89%B9%E5%8C%96.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E8%8C%83%E5%9B%B4%E5%81%8F%E7%89%B9%E5%8C%96.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B01.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B02.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B03.png">
+<meta property="article:published_time" content="2021-06-21T12:17:32.000Z">
+<meta property="article:modified_time" content="2021-06-21T15:46:54.666Z">
 <meta property="article:author" content="qiutongxue">
 <meta property="article:tag" content="c++（下）">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/%E7%B1%BB%E6%A8%A1%E6%9D%BF.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -153,30 +165,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++(下)-兼谈对象模型/P2-conversion-function-转换函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++(下)-兼谈对象模型/P7-P13-template模板" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      P2 conversion function,转换函数
+      P7-P13 template模板
     </h1>
   
 
         
-        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-06-21T04:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/" class="archive-article-date">
+  	<time datetime="2021-06-21T12:17:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P2-conversion-function-转换函数"><a href="#P2-conversion-function-转换函数" class="headerlink" title="P2-conversion-function-转换函数"></a>P2-conversion-function-转换函数</h1><span id="more"></span>
+        <h1 id="template模板"><a href="#template模板" class="headerlink" title="template模板"></a>template模板</h1><span id="more"></span>
 
 <hr>
-<h2 id="1、以Fraction为例"><a href="#1、以Fraction为例" class="headerlink" title="1、以Fraction为例"></a>1、以Fraction为例</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fraction</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Fraction</span>(<span class="keyword">int</span> num , <span class="keyword">int</span> den = <span class="number">1</span>)<span class="comment">//传入一个参数也可以，第二个参数默认为1</span></span><br><span class="line">        : <span class="built_in">m_numerator</span>(num) , <span class="built_in">m_denominator</span>(den) &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;  <span class="comment">//理论上来说既然调用的double那就应该返回double类型，所以不需要返回类型</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">double</span>) m_numerator / m_denominaotr;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_numerator;   <span class="comment">//分子</span></span><br><span class="line">    <span class="keyword">int</span> m_denominator; <span class="comment">//分母</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Fraction <span class="title">f</span><span class="params">(<span class="number">3</span> , <span class="number">5</span>)</span></span>;</span><br><span class="line"><span class="keyword">double</span> d = <span class="number">4</span> + f; <span class="comment">// 调用operator double() 将f转换为0.6</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在template的&lt;&gt;中class和typename<strong>等价</strong>，早先没有typename这个关键字，模板是后来才出现的，因此在模板广泛使用前用的是class，之后采用typename。</p>
+</blockquote>
+<h2 id="1、class-template类模板"><a href="#1、class-template类模板" class="headerlink" title="1、class template类模板"></a>1、class template类模板</h2><blockquote>
+<p>类中的数据类型不确定，就先将其抽出类，抽象为模板<br><img src="%E7%B1%BB%E6%A8%A1%E6%9D%BF.png" alt="类模板"></p>
+</blockquote>
+<hr>
+<h2 id="2、function-template函数模板"><a href="#2、function-template函数模板" class="headerlink" title="2、function template函数模板"></a>2、function template函数模板</h2><blockquote>
+<p>当一个函数的参数数据类型不确定时，同样可以先将其抽出来，抽象为模板。<br>当调用函数的时候自然要传入参数，编译器可以自动进行实参推导(argument deduction)<br>,然后进入函数中，看看此时的数据类型能否进行接下来的操作，不能就报错（例如如果图中stone没有定义&lt;，则编译出错），</p>
+</blockquote>
+<p><img src="%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF.png" alt="函数模板"></p>
+<hr>
+<h2 id="3、member-template成员模板"><a href="#3、member-template成员模板" class="headerlink" title="3、member template成员模板"></a>3、member template成员模板</h2><blockquote>
+<p>图中黄色代码，它本身是一个成员函数，它又是一个template，因此将其称为member template（不能为虚函数 ）。<br><img src="%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF1.png" alt="成员模板1"></p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span> , <span class="keyword">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">pair</span>&#123;</span></span><br><span class="line">    <span class="keyword">typedef</span> T1 first_type;</span><br><span class="line">    <span class="keyword">typedef</span> T2 second_type;</span><br><span class="line">    </span><br><span class="line">    T1 first;</span><br><span class="line">    T2 second;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">pair</span>()</span><br><span class="line">        : <span class="built_in">first</span>(<span class="built_in">T1</span>()) , <span class="built_in">second</span>(<span class="built_in">T2</span>()) &#123;&#125;</span><br><span class="line">    <span class="built_in">pair</span>(<span class="keyword">const</span> T1&amp; a , <span class="keyword">const</span> T2&amp; b)</span><br><span class="line">        : <span class="built_in">first</span>(a) , <span class="built_in">second</span>(b) &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//成员模板</span></span><br><span class="line">    <span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">U1</span> , <span class="keyword">class</span> <span class="title">U2</span>&gt;</span></span><br><span class="line">    <span class="built_in">pair</span>(<span class="keyword">const</span> pair&lt;U1 , U2&gt;&amp; p)</span><br><span class="line">        : <span class="built_in">first</span>(p.first) , <span class="built_in">second</span>(p.second) &#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>可以将子类当成参数赋值给父类，但是反之则不行。<br>即可以将图中的(鲫鱼，麻雀)当成参数，赋值给(鱼类，鸟类)；但是反过来不可以。类似于数据类型向上转型。<br>成员模板可以使得类更有<strong>弹性</strong>。<br><img src="%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF2.png" alt="成员模板2"></p>
+<p>new一个子类的指针赋值给父类，这样的操作被称为up-cast；智能指针同样适用于这样的规则。<br><img src="%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF3.png" alt="成员模板3"></p>
+<hr>
+<h2 id="4、specialization-模板特化"><a href="#4、specialization-模板特化" class="headerlink" title="4、specialization 模板特化"></a>4、specialization 模板特化</h2><blockquote>
+<p>与泛化相反，当需要实际使用时，将模板指定为具体数据类型被称为特化</p>
+</blockquote>
+<p>上方代码显然为泛化；<br>下方所有代码都为特化，特化的版本有无数种。<br><img src="%E6%A8%A1%E6%9D%BF%E7%89%B9%E5%8C%96.png" alt="模板特化"></p>
+<hr>
+<h2 id="5、partial-specialization模板偏特化（偏指局部）"><a href="#5、partial-specialization模板偏特化（偏指局部）" class="headerlink" title="5、partial specialization模板偏特化（偏指局部）"></a>5、partial specialization模板偏特化（偏指局部）</h2><h3 id="5-1-个数上的偏"><a href="#5-1-个数上的偏" class="headerlink" title="5.1 个数上的偏"></a>5.1 个数上的偏</h3><blockquote>
+<p>个数的偏：人为指定任意数据类型固定</p>
+</blockquote>
+<p>这里将T绑定为bool类型；<br><img src="%E4%B8%AA%E6%95%B0%E5%81%8F%E7%89%B9%E5%8C%96.png" alt="个数偏特化"></p>
+<h2 id="5-2-范围的偏"><a href="#5-2-范围的偏" class="headerlink" title="5.2 范围的偏"></a>5.2 范围的偏</h2><blockquote>
+<p>范围的偏：将数据类型的范围缩小，例如从任意数据类型缩小到指针类型</p>
+</blockquote>
+<p>①指的的默认定义代码段为它；<br>②指的是当T是指针时一定要用这一段定义；<br>③与②等价；  </p>
+<p>④调用的是①；⑤调用的是②/③</p>
+<p><img src="%E8%8C%83%E5%9B%B4%E5%81%8F%E7%89%B9%E5%8C%96.png" alt="范围偏特化"></p>
+<hr>
+<h2 id="6、template-template-parameter-模板模板参数"><a href="#6、template-template-parameter-模板模板参数" class="headerlink" title="6、template template parameter 模板模板参数"></a>6、template template parameter 模板模板参数</h2><p>当传入的第二个参数需要取决于第一个时，就需要用到模板模板参数.<br>例如灰色代码区希望实现的lst的参数类型取决于第一个参数，但是写法①是不合法，写法②才是合法的。<br>虽然理论上①可以，但是语法上就是不行。</p>
+<p><img src="%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B01.png" alt="模板模板参数1"></p>
+<p>两个打叉的错误原因并非上方代码设计原因，而是由unique_ptr和weak_ptr的特性造成的.<br><img src="%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B02.png" alt="模板模板参数2"></p>
+<p>这个并不是模板模板参数  ,因为②在写的时候已经绑定int，并没有一个模板的概念存在了，唯有XCls&lt;string , Lst&gt; mylst2中才有的Lst才有模板的概念，因为我们只是想传入一个Lst就可以。<br><img src="%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B03.png" alt="模板模板参数3"></p>
+
       
 
       
@@ -271,7 +323,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +337,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          P3 non-explicit one argument ctor
+          P14 c++11的三个主题
         
       </div>
     </a>
   
   
-    <a href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">P12 虚函数与多态</div>
+    <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P5-function-like-classes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P5 function-like classes</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -323,7 +375,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">P2-conversion-function-转换函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%A5Fraction%E4%B8%BA%E4%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、以Fraction为例</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#template%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text">template模板</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81class-template%E7%B1%BB%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.1.</span> <span class="toc-text">1、class template类模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81function-template%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.2.</span> <span class="toc-text">2、function template函数模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81member-template%E6%88%90%E5%91%98%E6%A8%A1%E6%9D%BF"><span class="toc-number">1.3.</span> <span class="toc-text">3、member template成员模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81specialization-%E6%A8%A1%E6%9D%BF%E7%89%B9%E5%8C%96"><span class="toc-number">1.4.</span> <span class="toc-text">4、specialization 模板特化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81partial-specialization%E6%A8%A1%E6%9D%BF%E5%81%8F%E7%89%B9%E5%8C%96%EF%BC%88%E5%81%8F%E6%8C%87%E5%B1%80%E9%83%A8%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">5、partial specialization模板偏特化（偏指局部）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E4%B8%AA%E6%95%B0%E4%B8%8A%E7%9A%84%E5%81%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1 个数上的偏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-%E8%8C%83%E5%9B%B4%E7%9A%84%E5%81%8F"><span class="toc-number">1.6.</span> <span class="toc-text">5.2 范围的偏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81template-template-parameter-%E6%A8%A1%E6%9D%BF%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B0"><span class="toc-number">1.7.</span> <span class="toc-text">6、template template parameter 模板模板参数</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>P2 conversion function,转换函数 | Hexo</title>
+  <title>P14 c++11的三个主题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="P2-conversion-function-转换函数">
+  <meta name="description" content="P14 c++11的三个主题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P2 conversion function,转换函数">
-<meta property="og:url" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="P14 c++11的三个主题">
+<meta property="og:url" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P2-conversion-function-转换函数">
+<meta property="og:description" content="P14 c++11的三个主题">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-06-21T04:37:49.000Z">
-<meta property="article:modified_time" content="2021-06-21T05:15:03.309Z">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/auto.png">
+<meta property="og:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/ranged-base-for.png">
+<meta property="article:published_time" content="2021-06-21T14:59:20.000Z">
+<meta property="article:modified_time" content="2021-06-21T15:44:02.420Z">
 <meta property="article:author" content="qiutongxue">
 <meta property="article:tag" content="c++（下）">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/auto.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -153,30 +156,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++(下)-兼谈对象模型/P2-conversion-function-转换函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++(下)-兼谈对象模型/P14-c++11的三个主题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      P2 conversion function,转换函数
+      P14 c++11的三个主题
     </h1>
   
 
         
-        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-06-21T04:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2021-06-21T14:59:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P2-conversion-function-转换函数"><a href="#P2-conversion-function-转换函数" class="headerlink" title="P2-conversion-function-转换函数"></a>P2-conversion-function-转换函数</h1><span id="more"></span>
+        <h1 id="P14-c-11的三个主题"><a href="#P14-c-11的三个主题" class="headerlink" title="P14 c++11的三个主题"></a>P14 c++11的三个主题</h1><span id="more"></span>
 
 <hr>
-<h2 id="1、以Fraction为例"><a href="#1、以Fraction为例" class="headerlink" title="1、以Fraction为例"></a>1、以Fraction为例</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fraction</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Fraction</span>(<span class="keyword">int</span> num , <span class="keyword">int</span> den = <span class="number">1</span>)<span class="comment">//传入一个参数也可以，第二个参数默认为1</span></span><br><span class="line">        : <span class="built_in">m_numerator</span>(num) , <span class="built_in">m_denominator</span>(den) &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">operator</span> <span class="title">double</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;  <span class="comment">//理论上来说既然调用的double那就应该返回double类型，所以不需要返回类型</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">double</span>) m_numerator / m_denominaotr;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> m_numerator;   <span class="comment">//分子</span></span><br><span class="line">    <span class="keyword">int</span> m_denominator; <span class="comment">//分母</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Fraction <span class="title">f</span><span class="params">(<span class="number">3</span> , <span class="number">5</span>)</span></span>;</span><br><span class="line"><span class="keyword">double</span> d = <span class="number">4</span> + f; <span class="comment">// 调用operator double() 将f转换为0.6</span></span><br></pre></td></tr></table></figure>
+<h2 id="1、variadic-templates-数量不确定的模板参数"><a href="#1、variadic-templates-数量不确定的模板参数" class="headerlink" title="1、variadic templates(数量不确定的模板参数)"></a>1、variadic templates(数量不确定的模板参数)</h2><p>当模板中的参数数量不确定时，可以使用variadic templates；<br>此时会将模板参数列分为两部分，第一个参数和后面一包参数，每次递归调用的是第一个参数或后面一包参数，直到后面一包参数大小为0<br>其中<code>...</code>就代表pack(包)，语法规定如此。<br>可以通过<code>sizeof...()</code>查询pack的大小</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T , <span class="keyword">typename</span>... Types&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(<span class="keyword">const</span> T&amp; firstArg , <span class="keyword">const</span> Types&amp;... args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout &lt;&lt; firstArg &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; <span class="keyword">sizeof</span>...(args) &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">print</span>(args...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">7.5</span> , <span class="string">&quot;hello&quot;</span> , <span class="number">5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="2、auto"><a href="#2、auto" class="headerlink" title="2、auto"></a>2、auto</h2><p>使用<code>auto</code>时，一定要让编译器能判断当前变量的数据类型<br><img src="auto.png" alt="auto"></p>
+<h2 id="3、ranged-base-for"><a href="#3、ranged-base-for" class="headerlink" title="3、ranged-base for"></a>3、ranged-base for</h2><p>①编译器在遍历容器中的所有元素时会将各个元素都拷贝到elem上，遍历速度慢<br>②编译器每次将容器中元素传引用给elem，此时改变elem的值，容器中的值也会变，而且遍历速度会更快<br><img src="ranged-base-for.png" alt="ranged-base-for"></p>
+
       
 
       
@@ -271,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P14-c++11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -285,18 +294,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          P3 non-explicit one argument ctor
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">P12 虚函数与多态</div>
+    <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P7-P13 template模板</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -323,7 +323,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">P2-conversion-function-转换函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BB%A5Fraction%E4%B8%BA%E4%BE%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1、以Fraction为例</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P14-c-11%E7%9A%84%E4%B8%89%E4%B8%AA%E4%B8%BB%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">P14 c++11的三个主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81variadic-templates-%E6%95%B0%E9%87%8F%E4%B8%8D%E7%A1%AE%E5%AE%9A%E7%9A%84%E6%A8%A1%E6%9D%BF%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1、variadic templates(数量不确定的模板参数)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81auto"><span class="toc-number">1.2.</span> <span class="toc-text">2、auto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81ranged-base-for"><span class="toc-number">1.3.</span> <span class="toc-text">3、ranged-base for</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
