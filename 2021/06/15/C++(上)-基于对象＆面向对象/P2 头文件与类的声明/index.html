@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>P2 头文件与类的声明 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/page/2/index.html">
+  <meta name="description" content="P2 头文件与类的声明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P2 头文件与类的声明">
+<meta property="og:url" content="http://example.com/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="P2 头文件与类的声明">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-06-15T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-21T07:56:27.921Z">
 <meta property="article:author" content="qiutongxue">
+<meta property="article:tag" content="c++（上）">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -154,396 +159,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-C++(上)-基于对象＆面向对象/P7 三大函数：拷贝函数、拷贝复制、析构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-C++(上)-基于对象＆面向对象/P2 头文件与类的声明" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/">P7 三大函数：拷贝函数、拷贝复制、析构</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/" class="archive-article-date">
-  	<time datetime="2021-06-16T11:47:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="P7-三大函数：拷贝函数、拷贝复制、析构"><a href="#P7-三大函数：拷贝函数、拷贝复制、析构" class="headerlink" title="P7 三大函数：拷贝函数、拷贝复制、析构"></a>P7 三大函数：拷贝函数、拷贝复制、析构</h1>
-        
-          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++(上)-基于对象＆面向对象/complex-h源码与例子" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/">complex.h源码与例子</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/" class="archive-article-date">
-  	<time datetime="2021-06-16T10:42:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="complex-h源码与test"><a href="#complex-h源码与test" class="headerlink" title="complex.h源码与test"></a>complex.h源码与test</h1>
-        
-          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/complex-h%E6%BA%90%E7%A0%81%E4%B8%8E%E4%BE%8B%E5%AD%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++(上)-基于对象＆面向对象/P5 操作符重载与临时对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/">P5.操作符重载与临时对象</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-06-15T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="P5-操作符重载与临时对象"><a href="#P5-操作符重载与临时对象" class="headerlink" title="P5.操作符重载与临时对象"></a>P5.操作符重载与临时对象</h1>
-        
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++(上)-基于对象＆面向对象/P4参数传递与返回值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/">P4参数传递与返回值</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-06-15T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="P4参数传递与返回值"><a href="#P4参数传递与返回值" class="headerlink" title="P4参数传递与返回值"></a>P4参数传递与返回值</h1>
-        
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++(上)-基于对象＆面向对象/P3 构造函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">P3 构造函数</a>
-    </h1>
-  
-
-        
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-06-15T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="P3-构造函数"><a href="#P3-构造函数" class="headerlink" title="P3 构造函数"></a>P3 构造函数</h1>
-        
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-C++(上)-基于对象＆面向对象/P2 头文件与类的声明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/">P2 头文件与类的声明</a>
+    <h1 class="article-title" itemprop="name">
+      P2 头文件与类的声明
     </h1>
   
 
@@ -556,12 +179,52 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P2-头文件与类的声明"><a href="#P2-头文件与类的声明" class="headerlink" title="P2 头文件与类的声明"></a>P2 头文件与类的声明</h1>
-        
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/#more">more >></a>
-        
+        <h1 id="P2-头文件与类的声明"><a href="#P2-头文件与类的声明" class="headerlink" title="P2 头文件与类的声明"></a>P2 头文件与类的声明</h1><span id="more"></span>
+<hr>
+<blockquote>
+<p>前言:在C语言中，数据都是全局，因此所有函数都可以处理这些数据。<br> 在C++中，有了类的，将数据与函数包在一起，仅包内的函数可以处理。其<br>实class就是以前C中的struct，只不过多了更多特性。</p>
+</blockquote>
+<h2 id="1、根据是否带指针可以将class分为：带指针与不带指针"><a href="#1、根据是否带指针可以将class分为：带指针与不带指针" class="headerlink" title="1、根据是否带指针可以将class分为：带指针与不带指针"></a>1、根据是否带指针可以将class分为：带指针与不带指针</h2><h3 id="不带指针的类：complex"><a href="#不带指针的类：complex" class="headerlink" title="不带指针的类：complex"></a>不带指针的类：complex</h3><p>内存占用的大小是取决于内部变量的数量和类型。</p>
+<h3 id="带指针的类：string"><a href="#带指针的类：string" class="headerlink" title="带指针的类：string"></a>带指针的类：string</h3><p>占用的内存只有一个指针的大小。</p>
+<h2 id="2、C-program代码形成基本形式"><a href="#2、C-program代码形成基本形式" class="headerlink" title="2、C++program代码形成基本形式"></a>2、C++program代码形成基本形式</h2><p><strong>.h(classes、declaration)+.cpp+.h(standard library)</strong></p>
+<h2 id="3、Header中的防卫式声明"><a href="#3、Header中的防卫式声明" class="headerlink" title="3、Header中的防卫式声明"></a>3、Header中的防卫式声明</h2><p>例：<br>通过如下声明，可以避免重复声明头文件<br>complex</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _COMPLEX_ <span class="comment">//如果没有定义</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _COMPLEX_ <span class="comment">//则定义</span></span></span><br><span class="line">、、、</span><br><span class="line">、、、</span><br><span class="line">、、、</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4、Header的布局"><a href="#4、Header的布局" class="headerlink" title="4、Header的布局"></a>4、Header的布局</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _COMPLEX_ <span class="comment">//如果没有定义</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _COMPLEX_ <span class="comment">//则定义</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//前置声明</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ostream</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span>;</span></span><br><span class="line"></span><br><span class="line">complex&amp;</span><br><span class="line">  __doapl(complex* ths , <span class="keyword">const</span> complex&amp; r);</span><br><span class="line"></span><br><span class="line"><span class="comment">//类声明</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//类定义</span></span><br><span class="line">complex::function...</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5、class的声明"><a href="#5、class的声明" class="headerlink" title="5、class的声明"></a>5、class的声明</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">complex</span>(<span class="keyword">double</span> r = <span class="number">0</span>, <span class="keyword">double</span> i = <span class="number">0</span>)</span><br><span class="line">        : <span class="built_in">re</span>(r), <span class="built_in">im</span>(i)</span><br><span class="line">    &#123;&#125;</span><br><span class="line">    complex&amp; <span class="keyword">operator</span> +=  (<span class="keyword">const</span> complex);</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">real</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> re; &#125;</span><br><span class="line">    <span class="function"><span class="keyword">double</span> <span class="title">imag</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> im; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">double</span> re, im;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">friend</span> complex&amp; _doapl(complex*, <span class="keyword">const</span> complex);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6、模板类"><a href="#6、模板类" class="headerlink" title="6、模板类"></a>6、模板类</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">complex</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">complex</span>(<span class="keyword">double</span> r = <span class="number">0</span>, <span class="keyword">double</span> i = <span class="number">0</span>)</span><br><span class="line">        : <span class="built_in">re</span>(r), <span class="built_in">im</span>(i)</span><br><span class="line">    &#123;&#125;</span><br><span class="line">    complex&amp; <span class="keyword">operator</span> +=  (<span class="keyword">const</span> complex);</span><br><span class="line">    <span class="function">T <span class="title">real</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> re; &#125;</span><br><span class="line">    <span class="function">T <span class="title">imag</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> im; &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    T re, im;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">friend</span> complex&amp; _doapl(complex*, <span class="keyword">const</span> complex);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//用法</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function">complex&lt;<span class="keyword">double</span>&gt; <span class="title">c1</span><span class="params">(<span class="number">1.1</span> , <span class="number">2.2</span>)</span></span>;</span><br><span class="line">    <span class="function">complex&lt;<span class="keyword">int</span>&gt; <span class="title">c2</span><span class="params">(<span class="number">2</span> , <span class="number">3</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/微信支付.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -581,16 +244,79 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          P3 构造函数
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -605,19 +331,33 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P2-%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">P2 头文件与类的声明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%A0%B9%E6%8D%AE%E6%98%AF%E5%90%A6%E5%B8%A6%E6%8C%87%E9%92%88%E5%8F%AF%E4%BB%A5%E5%B0%86class%E5%88%86%E4%B8%BA%EF%BC%9A%E5%B8%A6%E6%8C%87%E9%92%88%E4%B8%8E%E4%B8%8D%E5%B8%A6%E6%8C%87%E9%92%88"><span class="toc-number">1.1.</span> <span class="toc-text">1、根据是否带指针可以将class分为：带指针与不带指针</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%A6%E6%8C%87%E9%92%88%E7%9A%84%E7%B1%BB%EF%BC%9Acomplex"><span class="toc-number">1.1.1.</span> <span class="toc-text">不带指针的类：complex</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%A6%E6%8C%87%E9%92%88%E7%9A%84%E7%B1%BB%EF%BC%9Astring"><span class="toc-number">1.1.2.</span> <span class="toc-text">带指针的类：string</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81C-program%E4%BB%A3%E7%A0%81%E5%BD%A2%E6%88%90%E5%9F%BA%E6%9C%AC%E5%BD%A2%E5%BC%8F"><span class="toc-number">1.2.</span> <span class="toc-text">2、C++program代码形成基本形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81Header%E4%B8%AD%E7%9A%84%E9%98%B2%E5%8D%AB%E5%BC%8F%E5%A3%B0%E6%98%8E"><span class="toc-number">1.3.</span> <span class="toc-text">3、Header中的防卫式声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81Header%E7%9A%84%E5%B8%83%E5%B1%80"><span class="toc-number">1.4.</span> <span class="toc-text">4、Header的布局</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81class%E7%9A%84%E5%A3%B0%E6%98%8E"><span class="toc-number">1.5.</span> <span class="toc-text">5、class的声明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E6%A8%A1%E6%9D%BF%E7%B1%BB"><span class="toc-number">1.6.</span> <span class="toc-text">6、模板类</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
 
 
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&lt; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
+  
+
+  
+
+  
 
 
           </div>
@@ -639,8 +379,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
