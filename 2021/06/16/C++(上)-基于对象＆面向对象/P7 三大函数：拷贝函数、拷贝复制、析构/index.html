@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>P7 三大函数：拷贝函数、拷贝复制、析构 | Hexo</title>
+  <title>P7 三大函数：拷贝函数、拷贝赋值、析构 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="P7 三大函数：拷贝函数、拷贝复制、析构">
+  <meta name="description" content="P7 三大函数：拷贝函数、拷贝赋值、析构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P7 三大函数：拷贝函数、拷贝复制、析构">
+<meta property="og:title" content="P7 三大函数：拷贝函数、拷贝赋值、析构">
 <meta property="og:url" content="http://example.com/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P7 三大函数：拷贝函数、拷贝复制、析构">
+<meta property="og:description" content="P7 三大函数：拷贝函数、拷贝赋值、析构">
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/%E6%B5%85%E6%8B%B7%E8%B4%9D.png">
 <meta property="og:image" content="http://example.com/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P7%20%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84/%E8%87%AA%E6%88%91%E6%A3%80%E6%B5%8B.png">
 <meta property="article:published_time" content="2021-06-16T11:47:13.000Z">
-<meta property="article:modified_time" content="2021-06-22T06:01:56.715Z">
+<meta property="article:modified_time" content="2021-07-02T07:32:12.441Z">
 <meta property="article:author" content="qiutongxue">
 <meta property="article:tag" content="c++（上）">
 <meta name="twitter:card" content="summary">
@@ -163,7 +163,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      P7 三大函数：拷贝函数、拷贝复制、析构
+      P7 三大函数：拷贝函数、拷贝赋值、析构
     </h1>
   
 
@@ -176,13 +176,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P7-三大函数：拷贝函数、拷贝复制、析构"><a href="#P7-三大函数：拷贝函数、拷贝复制、析构" class="headerlink" title="P7 三大函数：拷贝函数、拷贝复制、析构"></a>P7 三大函数：拷贝函数、拷贝复制、析构</h1><span id="more"></span>
+        <h1 id="P7-三大函数：拷贝函数、拷贝赋值、析构"><a href="#P7-三大函数：拷贝函数、拷贝赋值、析构" class="headerlink" title="P7 三大函数：拷贝函数、拷贝赋值、析构"></a>P7 三大函数：拷贝函数、拷贝赋值、析构</h1><span id="more"></span>
 
 <hr>
 <h2 id="1、String"><a href="#1、String" class="headerlink" title="1、String"></a>1、String</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">String</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//Big Three</span></span><br><span class="line">    <span class="built_in">String</span>(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">String</span>(<span class="keyword">const</span> String&amp; str);</span><br><span class="line">    String&amp; <span class="keyword">operator</span>=(<span class="keyword">const</span> String&amp; str);</span><br><span class="line">    ~<span class="built_in">String</span>();</span><br><span class="line">    <span class="function"><span class="keyword">char</span>* <span class="title">get_c_str</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;<span class="keyword">return</span> m_data;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">char</span>* m_data;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="2、ctor和dtor（构造函数和析构函数）"><a href="#2、ctor和dtor（构造函数和析构函数）" class="headerlink" title="2、ctor和dtor（构造函数和析构函数）"></a>2、ctor和dtor（构造函数和析构函数）</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">inline</span></span></span><br><span class="line"><span class="function"><span class="title">String::String</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>* cstr = <span class="number">0</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cstr)&#123;</span><br><span class="line">        m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="built_in">strlen</span>(cstr) + <span class="number">1</span>];</span><br><span class="line">        <span class="built_in">strcpy</span>(m_data , cstr);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        m_data = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">1</span>];</span><br><span class="line">        *m_data = <span class="string">&#x27;\0&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">inline</span></span><br><span class="line">String::~<span class="built_in">String</span>()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">delete</span>[] m_data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>s1和s2在离开作用域后自然会消亡，但是p申请了一块内存，及时离开作用域这块内存仍被占用，所以在不用p后要及时delete。</p>
+<p>s1和s2在离开作用域后自然会消亡，但是p申请了一块内存，即使离开作用域这块内存仍被占用，所以在不用p后要及时delete。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="function">String <span class="title">s1</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function">String <span class="title">s2</span><span class="params">(<span class="string">&quot;Hello&quot;</span>)</span></span>;</span><br><span class="line">    String* p = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">    <span class="keyword">delete</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="3、带指针的类一定要有拷贝构造和拷贝赋值"><a href="#3、带指针的类一定要有拷贝构造和拷贝赋值" class="headerlink" title="3、带指针的类一定要有拷贝构造和拷贝赋值"></a>3、带指针的类一定要有拷贝构造和拷贝赋值</h2><h3 id="一、拷贝构造"><a href="#一、拷贝构造" class="headerlink" title="一、拷贝构造"></a>一、拷贝构造</h3><h4 id="1-浅拷贝"><a href="#1-浅拷贝" class="headerlink" title="1.浅拷贝"></a>1.浅拷贝</h4><p>不进行拷贝构造（深拷贝）的后果：  </p>
 <p><img src="%E6%B5%85%E6%8B%B7%E8%B4%9D.png" alt="浅拷贝">  </p>
@@ -340,7 +340,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P7-%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E5%A4%8D%E5%88%B6%E3%80%81%E6%9E%90%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">P7 三大函数：拷贝函数、拷贝复制、析构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81String"><span class="toc-number">1.1.</span> <span class="toc-text">1、String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ctor%E5%92%8Cdtor%EF%BC%88%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">2、ctor和dtor（构造函数和析构函数）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B8%A6%E6%8C%87%E9%92%88%E7%9A%84%E7%B1%BB%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%89%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%92%8C%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.</span> <span class="toc-text">3、带指针的类一定要有拷贝构造和拷贝赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0"><span class="toc-number">1.3.1.</span> <span class="toc-text">一、拷贝构造</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1.浅拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%88%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%EF%BC%89"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2.深拷贝（拷贝构造）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.2.</span> <span class="toc-text">二、拷贝赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#output%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">output函数</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P7-%E4%B8%89%E5%A4%A7%E5%87%BD%E6%95%B0%EF%BC%9A%E6%8B%B7%E8%B4%9D%E5%87%BD%E6%95%B0%E3%80%81%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC%E3%80%81%E6%9E%90%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text">P7 三大函数：拷贝函数、拷贝赋值、析构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81String"><span class="toc-number">1.1.</span> <span class="toc-text">1、String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81ctor%E5%92%8Cdtor%EF%BC%88%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%92%8C%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">2、ctor和dtor（构造函数和析构函数）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B8%A6%E6%8C%87%E9%92%88%E7%9A%84%E7%B1%BB%E4%B8%80%E5%AE%9A%E8%A6%81%E6%9C%89%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%92%8C%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.</span> <span class="toc-text">3、带指针的类一定要有拷贝构造和拷贝赋值</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0"><span class="toc-number">1.3.1.</span> <span class="toc-text">一、拷贝构造</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">1.浅拷贝</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%88%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%EF%BC%89"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">2.深拷贝（拷贝构造）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8B%B7%E8%B4%9D%E8%B5%8B%E5%80%BC"><span class="toc-number">1.3.2.</span> <span class="toc-text">二、拷贝赋值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#output%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">output函数</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -456,7 +456,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程（第一讲）</a>
+                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第一讲)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -464,11 +468,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第三讲)</a>
               </li>
             
             <div class="clearfix"></div>

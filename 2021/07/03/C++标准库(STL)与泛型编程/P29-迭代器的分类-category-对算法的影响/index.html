@@ -6,29 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>P20-P21 const、new和delete | Hexo</title>
+  <title>P29 迭代器的分类(category)对算法的影响 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="P20-P21 const、new和delete">
+  <meta name="description" content="P29 迭代器的分类(category)对算法的影响">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P20-P21 const、new和delete">
-<meta property="og:url" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/index.html">
+<meta property="og:title" content="P29 迭代器的分类(category)对算法的影响">
+<meta property="og:url" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P20-P21 const、new和delete">
+<meta property="og:description" content="P29 迭代器的分类(category)对算法的影响">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/const.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E5%85%A8%E5%B1%80%E9%87%8D%E8%BD%BD.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E6%88%90%E5%91%98%E9%87%8D%E8%BD%BD.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E5%AE%9E%E4%BE%8B1.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E5%AE%9E%E4%BE%8B2.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E5%AE%9E%E4%BE%8B11.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/%E5%AE%9E%E4%BE%8B12.png">
-<meta property="og:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/new(extra).png">
-<meta property="article:published_time" content="2021-06-22T05:05:17.000Z">
-<meta property="article:modified_time" content="2021-06-22T13:38:08.684Z">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/distance.png">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/advance.png">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/copy.png">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/destroy.png">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/unique_copy.png">
+<meta property="og:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/%E6%BA%90%E7%A0%81%E4%B8%AD%E5%AF%B9%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E2%80%9C%E6%9A%97%E7%A4%BA%E2%80%9D.png">
+<meta property="article:published_time" content="2021-07-03T06:31:50.000Z">
+<meta property="article:modified_time" content="2021-07-03T08:02:18.293Z">
 <meta property="article:author" content="qiutongxue">
-<meta property="article:tag" content="c++（下）">
+<meta property="article:tag" content="C++标准库(STL)与泛型编程(第三讲)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/const.png">
+<meta name="twitter:image" content="http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/distance.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -162,68 +160,46 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++(下)-兼谈对象模型/P20-谈谈const" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++标准库(STL)与泛型编程/P29-迭代器的分类-category-对算法的影响" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      P20-P21 const、new和delete
+      P29 迭代器的分类(category)对算法的影响
     </h1>
   
 
         
-        <a href="/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/" class="archive-article-date">
-  	<time datetime="2021-06-22T05:05:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-22</time>
+        <a href="/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/" class="archive-article-date">
+  	<time datetime="2021-07-03T06:31:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P20-P21-const、new和delete"><a href="#P20-P21-const、new和delete" class="headerlink" title="P20-P21 const、new和delete"></a>P20-P21 const、new和delete</h1><span id="more"></span>
+        <h1 id="P29-迭代器的分类-category-对算法的影响"><a href="#P29-迭代器的分类-category-对算法的影响" class="headerlink" title="P29 迭代器的分类(category)对算法的影响"></a>P29 迭代器的分类(category)对算法的影响</h1><span id="more"></span>
 
 <hr>
-<h2 id="1、const-member-functions-常量成员函数"><a href="#1、const-member-functions-常量成员函数" class="headerlink" title="1、const member functions 常量成员函数"></a>1、const member functions 常量成员函数</h2><blockquote>
-<p>const只能加在成员函数上，不能加在全局函数上</p>
-</blockquote>
-<ol>
-<li>const对象只能调用const成员函数；  </li>
-<li> 一般对象既可以调用const成员函数也可以调用一般成员函数；   </li>
-<li><strong>但那时当成员函数的const和non-const版本同时存在，const object只能调用const版本；non-const object只能调用non-const版本</strong>   </li>
-<li>函数签名包含const，这样可以区分只读和可写</li>
+<h2 id="1-distance"><a href="#1-distance" class="headerlink" title="1. distance()"></a>1. distance()</h2><p><strong>distance</strong>用来求出两个指针之间的距离，如果两个指针处于连续空间，那么直接尾减头即可；否则需要从头还是一步一步走到尾为止。</p>
+<p>下方的distance是对外开放的函数，其返回类型需要经过萃取机回答，因为迭代器分为空间连续与不连续。这里通过第三参数来区别调用次函数的类型。<br><img src="distance.png" alt="distance"></p>
+<hr>
+<h2 id="2-advance"><a href="#2-advance" class="headerlink" title="2. advance()"></a>2. advance()</h2><p><strong>advance</strong>让迭代器向前移动n个距离<br>同样是通过萃取机返回迭代器的类型，此时将迭代器分为三类：可以跳跃、只能向前一个一个走、可以向前或向后一个一个走，然后决定调用的哪个次函数<br><img src="advance.png" alt="advance"></p>
+<hr>
+<p>通过以上两个函数我们发现，虽然迭代器有5种，但是真正用到的函数只有2个或三个，造成这种结果的原因就是这些迭代器是以继承的关系被定义，即子类is a父类。</p>
+<hr>
+<h2 id="3-copy"><a href="#3-copy" class="headerlink" title="3. copy()"></a>3. copy()</h2><ol>
+<li>通过这张图可以看出copy分类知细，C++开发者通过不断细分传入值的特点来调用不同的方法，以此提高效率。  </li>
+<li>memmove()是一个比较底层的函数，值大范围数据搬运，速度快。  </li>
+<li>trivial表示不重要的，如果是不重要的可以直接调用memmove().  </li>
+<li>其中type traits是类型萃取机，因为对于没有指针的类，不需要调用析构函数等，所以进行的操作更简单；反之对于有指针的类，其操作更复杂。  </li>
 </ol>
-<p><img src="const.png" alt="const"></p>
-<hr>
-<h2 id="2、new和delete"><a href="#2、new和delete" class="headerlink" title="2、new和delete"></a>2、new和delete</h2><blockquote>
-<p>new/delete都是操作符；malloc/free都是函数<br>new：先分配一块内存，然后将这块内存强转为new的类型，最后调用构造函数，分配空间的时候调用了malloc。<br>malloc：单纯分配一块内存而已<br>delete：对于有指针的类来说，先调用析构函数释放动态分配的内存，再释放对象占据的内存，内部调用了free<br>free：释放空间  </p>
-</blockquote>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Complex* pc = <span class="keyword">new</span> <span class="built_in">Complex</span>(<span class="number">1</span> , <span class="number">2</span>);</span><br><span class="line">=&gt;</span><br><span class="line">编译器转化为：</span><br><span class="line"><span class="keyword">void</span>* mem = <span class="keyword">operator</span> <span class="built_in"><span class="keyword">new</span></span>(<span class="built_in"><span class="keyword">sizeof</span></span>(Complex)); <span class="comment">//分配内存，内部调用malloc(n)</span></span><br><span class="line">pc = <span class="keyword">static_cast</span>&lt;Complex*&gt;(mem);           <span class="comment">//转型</span></span><br><span class="line">pc-&gt;Complex::<span class="built_in">Complex</span>(<span class="number">1</span> , <span class="number">2</span>);               <span class="comment">//构造函数，实际上Complex::Complex(pc,1,2);</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> ps;</span><br><span class="line">=&gt;</span><br><span class="line">编译器转化为：</span><br><span class="line">String::~<span class="built_in">String</span>(ps); <span class="comment">//析构函数，先将自身动态分配的内存释放</span></span><br><span class="line"><span class="function"><span class="keyword">operator</span> <span class="title">delete</span><span class="params">(ps)</span></span>; <span class="comment">//释放内存，内部调用free(ps)</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-1-全局重载"><a href="#2-1-全局重载" class="headerlink" title="2.1 全局重载"></a>2.1 全局重载</h3><p>此时重载了全局的new和delete操作<br><img src="%E5%85%A8%E5%B1%80%E9%87%8D%E8%BD%BD.png" alt="全局重载"></p>
-<p>此时仅重载Foo这个类的new和delete操作<br><img src="%E6%88%90%E5%91%98%E9%87%8D%E8%BD%BD.png" alt="成员重载"></p>
-<hr>
-<h2 id="3、实例"><a href="#3、实例" class="headerlink" title="3、实例"></a>3、实例</h2><p>从Foo定义来看，一个Foo所占的内存应该是12B  </p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果没有成员函数，就调用全局函数</span></span><br><span class="line">Foo* pf = <span class="keyword">new</span> Foo;</span><br><span class="line"><span class="keyword">delete</span> pf;</span><br><span class="line"></span><br><span class="line"><span class="comment">//强制调用全局函数</span></span><br><span class="line">Foo* pf = ::<span class="keyword">new</span> Foo;</span><br><span class="line">::<span class="keyword">delete</span> pf;</span><br></pre></td></tr></table></figure>
-<p><img src="%E5%AE%9E%E4%BE%8B1.png" alt="实例1"></p>
-<p>但是，new一个长度是5的Foo数组，所占的内存却是64B，原因是这个数组需要一个计数器来记录数组的大小<br><img src="%E5%AE%9E%E4%BE%8B2.png" alt="实例2"></p>
-<h2 id="3、重载new-、delete"><a href="#3、重载new-、delete" class="headerlink" title="3、重载new()、delete()"></a>3、重载new()、delete()</h2><p>我们可以重载class member operator new()，并且写出多个半个，前提是每个版本的声明都必须有特殊的参数列，<br>其中第一个参数必须是size_t，其余参数以new指定的placement arguments为初值。<br>placements arguments：出现在new(,,,)小括号内的参数</p>
-<p>例如：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Foo* pf = <span class="built_in"><span class="keyword">new</span></span>(<span class="number">300</span> , <span class="string">&#x27;c&#x27;</span>) Foo;</span><br></pre></td></tr></table></figure>
-
-<p>同样我们可以重载类的class member operator delete()，并写出很多个版本，但是并不会被delete调用。<br>仅当new所调用的ctor抛出exception，才会调用这些重载的operator delete()。</p>
-<p>通过红色字体可以看出，当传入的第一个参数不是size_t时会报错  _<br><img src="%E5%AE%9E%E4%BE%8B11.png" alt="实例11">  </p>
-<p>人为地在调用构造函数的时候抛出异常，当执行到⑤的时候编译器应该调用operator delete(void* , long)，<br>但是因为编译器的原因并没有调用<br><img src="%E5%AE%9E%E4%BE%8B12.png" alt="实例12"></p>
-<p>此外，即使operator delete()并未与operator new()在参数列表上一一对应也不影响正常性，<br>因为operator delete()只是为了处理ctor发出的异常，不写只是代表你放弃处理该异常。</p>
-<h2 id="4、basic-string使用new-extra-当作申请量"><a href="#4、basic-string使用new-extra-当作申请量" class="headerlink" title="4、basic_string使用new(extra)当作申请量"></a>4、basic_string使用new(extra)当作申请量</h2><blockquote>
-<p><strong>placement new(定位放置)</strong>:一般来说，使用new申请空间时，是从系统的“堆”（heap）中分配空间。<br>申请所得的空间的位置是根据当时的内存的实际使用情况决定的。但是，在某些特殊情况下，<br>可能需要在已分配的特定内存创建对象，这就是所谓的“定位放置new”（placement new）操作。</p>
-</blockquote>
-<p>这里就以标准库中string举例，当创建一个自己时，这里的操作是</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Rep *p = <span class="built_in"><span class="keyword">new</span></span>(extra)Rep;</span><br></pre></td></tr></table></figure>
-<p>Rep用作计数，string的内容存在extra中<br>当想无声无息地多分配一些内存时，可以采用上述方法<br><img src="new(extra).png" alt="new(extra)"></p>
+<p><img src="copy.png" alt="copy"></p>
+<h2 id="4-destroy"><a href="#4-destroy" class="headerlink" title="4.destroy()"></a>4.destroy()</h2><p><img src="destroy.png" alt="destroy"></p>
+<h2 id="5-unique-copy"><a href="#5-unique-copy" class="headerlink" title="5.unique_copy()"></a>5.unique_copy()</h2><p><img src="unique_copy.png" alt="unique_copy"></p>
+<h2 id="6-源码中对迭代器类型的“暗示”"><a href="#6-源码中对迭代器类型的“暗示”" class="headerlink" title="6.源码中对迭代器类型的“暗示”"></a>6.源码中对迭代器类型的“暗示”</h2><p>例如sort()中，模板列表中是以RandomAccessIterator命名数据类型，就是在暗示需要传递可以支持随机访问的迭代器<br><img src="%E6%BA%90%E7%A0%81%E4%B8%AD%E5%AF%B9%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E2%80%9C%E6%9A%97%E7%A4%BA%E2%80%9D.png" alt="源码中对迭代器类型的“暗示”"></p>
 
       
 
@@ -263,7 +239,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">C++标准库(STL)与泛型编程(第三讲)</a>
         		</li>
       		
 		</ul>
@@ -319,7 +295,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P20-%E8%B0%88%E8%B0%88const/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -333,18 +309,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/06/23/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P1-%E8%AE%A4%E8%AF%86headers%E3%80%81%E7%89%88%E6%9C%AC%E3%80%81%E9%87%8D%E8%A6%81%E8%B5%84%E6%BA%90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          P1 认识headers、版本、重要资源
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/06/22/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P17-P19-vptr%E5%92%8Cvtbl/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">P17-P19 Object Model对象模型</div>
+    <a href="/2021/07/03/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P28-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P28 迭代器的分类(category)</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -371,7 +338,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P20-P21-const%E3%80%81new%E5%92%8Cdelete"><span class="toc-number">1.</span> <span class="toc-text">P20-P21 const、new和delete</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81const-member-functions-%E5%B8%B8%E9%87%8F%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1、const member functions 常量成员函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81new%E5%92%8Cdelete"><span class="toc-number">1.2.</span> <span class="toc-text">2、new和delete</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%85%A8%E5%B1%80%E9%87%8D%E8%BD%BD"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 全局重载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.3.</span> <span class="toc-text">3、实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E9%87%8D%E8%BD%BDnew-%E3%80%81delete"><span class="toc-number">1.4.</span> <span class="toc-text">3、重载new()、delete()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81basic-string%E4%BD%BF%E7%94%A8new-extra-%E5%BD%93%E4%BD%9C%E7%94%B3%E8%AF%B7%E9%87%8F"><span class="toc-number">1.5.</span> <span class="toc-text">4、basic_string使用new(extra)当作申请量</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P29-%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%88%86%E7%B1%BB-category-%E5%AF%B9%E7%AE%97%E6%B3%95%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-number">1.</span> <span class="toc-text">P29 迭代器的分类(category)对算法的影响</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-distance"><span class="toc-number">1.1.</span> <span class="toc-text">1. distance()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-advance"><span class="toc-number">1.2.</span> <span class="toc-text">2. advance()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-copy"><span class="toc-number">1.3.</span> <span class="toc-text">3. copy()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-destroy"><span class="toc-number">1.4.</span> <span class="toc-text">4.destroy()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-unique-copy"><span class="toc-number">1.5.</span> <span class="toc-text">5.unique_copy()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%BA%90%E7%A0%81%E4%B8%AD%E5%AF%B9%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E2%80%9C%E6%9A%97%E7%A4%BA%E2%80%9D"><span class="toc-number">1.6.</span> <span class="toc-text">6.源码中对迭代器类型的“暗示”</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -487,7 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程（第一讲）</a>
+                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第一讲)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,11 +466,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第三讲)</a>
               </li>
             
             <div class="clearfix"></div>
