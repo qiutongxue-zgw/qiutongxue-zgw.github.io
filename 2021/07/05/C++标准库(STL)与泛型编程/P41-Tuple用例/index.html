@@ -6,23 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>P36 迭代器适配器 | Hexo</title>
+  <title>P41 Tuple用例 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="P36 reverse_iterator">
+  <meta name="description" content="P41 Tuple用例">
 <meta property="og:type" content="article">
-<meta property="og:title" content="P36 迭代器适配器">
-<meta property="og:url" content="http://example.com/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/index.html">
+<meta property="og:title" content="P41 Tuple用例">
+<meta property="og:url" content="http://example.com/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="P36 reverse_iterator">
+<meta property="og:description" content="P41 Tuple用例">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/reverse_iterator.png">
-<meta property="og:image" content="http://example.com/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/insert.png">
-<meta property="article:published_time" content="2021-07-04T03:49:50.000Z">
-<meta property="article:modified_time" content="2021-07-04T04:36:55.748Z">
+<meta property="og:image" content="http://example.com/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/tuple%E7%94%A8%E4%BE%8B.png">
+<meta property="og:image" content="http://example.com/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/%E5%AE%9A%E4%B9%89.png">
+<meta property="article:published_time" content="2021-07-05T07:33:07.000Z">
+<meta property="article:modified_time" content="2021-07-05T12:36:49.228Z">
 <meta property="article:author" content="qiutongxue">
-<meta property="article:tag" content="C++标准库(STL)与泛型编程(第三讲)">
+<meta property="article:tag" content="C++标准库(STL)与泛型编程(第四讲)">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/reverse_iterator.png">
+<meta name="twitter:image" content="http://example.com/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/tuple%E7%94%A8%E4%BE%8B.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -156,33 +156,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C++标准库(STL)与泛型编程/P36-reverse-iterator" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C++标准库(STL)与泛型编程/P41-Tuple用例" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      P36 迭代器适配器
+      P41 Tuple用例
     </h1>
   
 
         
-        <a href="/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/" class="archive-article-date">
-  	<time datetime="2021-07-04T03:49:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-04</time>
+        <a href="/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/" class="archive-article-date">
+  	<time datetime="2021-07-05T07:33:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P36-reverse-iterator"><a href="#P36-reverse-iterator" class="headerlink" title="P36 reverse_iterator"></a>P36 reverse_iterator</h1><span id="more"></span>
+        <h1 id="P41-Tuple用例"><a href="#P41-Tuple用例" class="headerlink" title="P41 Tuple用例"></a>P41 Tuple用例</h1><span id="more"></span>
 
 <hr>
-<h2 id="迭代器适配器：reverse-iterator"><a href="#迭代器适配器：reverse-iterator" class="headerlink" title="迭代器适配器：reverse_iterator"></a>迭代器适配器：reverse_iterator</h2><p> 将正向迭代器的操作取相反的操作就是逆向迭代器（把需要改造的东西记下来，然后决定如何改造）</p>
-<p><img src="reverse_iterator.png" alt="reverse_iterator"></p>
-<h2 id="迭代器适配器：inserter"><a href="#迭代器适配器：inserter" class="headerlink" title="迭代器适配器：inserter"></a>迭代器适配器：inserter</h2><p>重载了=，使得=执行insert</p>
-<p><img src="insert.png" alt="insert"></p>
+<h1 id="tuple用例"><a href="#tuple用例" class="headerlink" title="tuple用例"></a>tuple用例</h1><p><code>tuple</code>是一堆东西的组合<br>使用方法：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义</span></span><br><span class="line">tuple&lt;string, <span class="keyword">int</span>, <span class="keyword">int</span>&gt; t;</span><br><span class="line">t = <span class="built_in">make_tuple</span>(<span class="string">&quot;123&quot;</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">cout &lt;&lt; get&lt;<span class="number">0</span>&gt;(t) &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; get&lt;<span class="number">2</span>&gt;(t) &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//tuple可以重载操作符，例如tuple之间可以比较大小，tuple可以输出...</span></span><br><span class="line"><span class="comment">//同样可以将tuple赋值给各个变量</span></span><br><span class="line"><span class="built_in">tie</span>(i1, f1, s1) = t3;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取TupleType中元素数量</span></span><br><span class="line"><span class="keyword">typedef</span> tuple&lt;string, <span class="keyword">int</span>, <span class="keyword">int</span>&gt; TupleType; </span><br><span class="line">cout &lt;&lt; tuple_size&lt;TupleType&gt;::value &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取TupleType中第x个元素类型</span></span><br><span class="line"><span class="keyword">typedef</span> tuple_element&lt;x, TupleType&gt;::type T;</span><br></pre></td></tr></table></figure>
+
+<p><img src="tuple%E7%94%A8%E4%BE%8B.png" alt="tuple用例"></p>
+<hr>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>利用了<code>...</code>，来表示若干个参数</p>
+<p>利用继承，n个参数的类继承n-1个参数的类，最终特化一个参数个数为0的类，这个类什么也不做，表示退出。  </p>
+<p>这里的<code>tail()</code>函数返回尾部参数，利用了转型的方式以及<code>this</code>指针指向的是<code>tuple</code>最末尾巧妙地实现截取尾部，前面已经<code>typedf tuple&lt;Tail...&gt; inherited</code>。<br><img src="%E5%AE%9A%E4%B9%89.png" alt="定义"></p>
 
       
 
@@ -222,7 +226,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">C++标准库(STL)与泛型编程(第三讲)</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">C++标准库(STL)与泛型编程(第四讲)</a>
         		</li>
       		
 		</ul>
@@ -278,7 +282,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P36-reverse-iterator/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P41-Tuple%E7%94%A8%E4%BE%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -292,9 +296,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P42-type-traits/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          P42 type traits
+        
+      </div>
+    </a>
   
-    <a href="/2021/07/04/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P35-bind/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">P35 bind</div>
+  
+    <a href="/2021/07/05/C++%E6%A0%87%E5%87%86%E5%BA%93(STL)%E4%B8%8E%E6%B3%9B%E5%9E%8B%E7%BC%96%E7%A8%8B/P40-%E4%B8%80%E4%B8%AA%E4%B8%87%E7%94%A8%E7%9A%84hash-function/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">P40 一个万用的hash function</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -321,7 +334,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P36-reverse-iterator"><span class="toc-number">1.</span> <span class="toc-text">P36 reverse_iterator</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%9Areverse-iterator"><span class="toc-number">1.1.</span> <span class="toc-text">迭代器适配器：reverse_iterator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%80%82%E9%85%8D%E5%99%A8%EF%BC%9Ainserter"><span class="toc-number">1.2.</span> <span class="toc-text">迭代器适配器：inserter</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P41-Tuple%E7%94%A8%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">P41 Tuple用例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tuple%E7%94%A8%E4%BE%8B"><span class="toc-number">2.</span> <span class="toc-text">tuple用例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.</span> <span class="toc-text">定义</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -437,7 +450,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第一讲)</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,11 +458,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第一讲)</a>
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第三讲)</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第三讲)</a>
+                <a href="javascript:void(0)" class="js-tag color2">C++标准库(STL)与泛型编程(第四讲)</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c++（上）</a>
               </li>
             
             <div class="clearfix"></div>
