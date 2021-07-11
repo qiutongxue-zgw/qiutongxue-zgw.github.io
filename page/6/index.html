@@ -150,29 +150,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-C++(上)-基于对象＆面向对象/P5 操作符重载与临时对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++(下)-兼谈对象模型/P7-P13-template模板" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/">P5.操作符重载与临时对象</a>
+      <a class="article-title" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/">P7-P13 template模板</a>
     </h1>
   
 
         
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-  	<time datetime="2021-06-15T11:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/" class="archive-article-date">
+  	<time datetime="2021-06-21T12:17:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P5-操作符重载与临时对象"><a href="#P5-操作符重载与临时对象" class="headerlink" title="P5.操作符重载与临时对象"></a>P5.操作符重载与临时对象</h1>
+        <h1 id="template模板"><a href="#template模板" class="headerlink" title="template模板"></a>template模板</h1>
         
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/#more">more >></a>
         
       
 
@@ -186,7 +186,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
         		</li>
       		
 		</ul>
@@ -196,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P5%20%E6%93%8D%E4%BD%9C%E7%AC%A6%E9%87%8D%E8%BD%BD%E4%B8%8E%E4%B8%B4%E6%97%B6%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P7-P13-template%E6%A8%A1%E6%9D%BF/">展开全文 >></a>
         </p>
       
 
@@ -226,29 +226,29 @@
 
 
   
-    <article id="post-C++(上)-基于对象＆面向对象/P4参数传递与返回值" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++(下)-兼谈对象模型/P5-function-like-classes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/">P4参数传递与返回值</a>
+      <a class="article-title" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P5-function-like-classes/">P5 function-like classes</a>
     </h1>
   
 
         
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/" class="archive-article-date">
-  	<time datetime="2021-06-15T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P5-function-like-classes/" class="archive-article-date">
+  	<time datetime="2021-06-21T05:55:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P4参数传递与返回值"><a href="#P4参数传递与返回值" class="headerlink" title="P4参数传递与返回值"></a>P4参数传递与返回值</h1>
+        <h1 id="P5-function-like-classes"><a href="#P5-function-like-classes" class="headerlink" title="P5 function-like classes"></a>P5 function-like classes</h1>
         
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P5-function-like-classes/#more">more >></a>
         
       
 
@@ -262,7 +262,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
         		</li>
       		
 		</ul>
@@ -272,7 +272,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P4%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92%E4%B8%8E%E8%BF%94%E5%9B%9E%E5%80%BC/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P5-function-like-classes/">展开全文 >></a>
         </p>
       
 
@@ -302,29 +302,29 @@
 
 
   
-    <article id="post-C++(上)-基于对象＆面向对象/P3 构造函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++(下)-兼谈对象模型/P4-pointer-like-classes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">P3 构造函数</a>
+      <a class="article-title" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P4-pointer-like-classes/">P4 pointer-like classes</a>
     </h1>
   
 
         
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2021-06-15T08:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P4-pointer-like-classes/" class="archive-article-date">
+  	<time datetime="2021-06-21T05:16:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P3-构造函数"><a href="#P3-构造函数" class="headerlink" title="P3 构造函数"></a>P3 构造函数</h1>
+        <h1 id="P4-pointer-like-classes"><a href="#P4-pointer-like-classes" class="headerlink" title="P4 pointer-like classes"></a>P4 pointer-like classes</h1>
         
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P4-pointer-like-classes/#more">more >></a>
         
       
 
@@ -338,7 +338,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
         		</li>
       		
 		</ul>
@@ -348,7 +348,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P3%20%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P4-pointer-like-classes/">展开全文 >></a>
         </p>
       
 
@@ -378,29 +378,181 @@
 
 
   
-    <article id="post-C++(上)-基于对象＆面向对象/P2 头文件与类的声明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-C++(下)-兼谈对象模型/P3-non-explicit-one-argument-ctor" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/">P2 头文件与类的声明</a>
+      <a class="article-title" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/">P3 non-explicit one argument ctor</a>
     </h1>
   
 
         
-        <a href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2021-06-15T07:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-15</time>
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/" class="archive-article-date">
+  	<time datetime="2021-06-21T05:11:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="P2-头文件与类的声明"><a href="#P2-头文件与类的声明" class="headerlink" title="P2 头文件与类的声明"></a>P2 头文件与类的声明</h1>
+        <h1 id="P3-non-explicit-one-argument-ctor"><a href="#P3-non-explicit-one-argument-ctor" class="headerlink" title="P3 non-explicit one argument ctor"></a>P3 non-explicit one argument ctor</h1>
         
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/#more">more >></a>
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P3-non-explicit-one-argument-ctor/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(下)-兼谈对象模型/P2-conversion-function-转换函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/">P2 conversion function,转换函数</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2021-06-21T04:37:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P2-conversion-function-转换函数"><a href="#P2-conversion-function-转换函数" class="headerlink" title="P2-conversion-function-转换函数"></a>P2-conversion-function-转换函数</h1>
+        
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（下）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/21/C++(%E4%B8%8B)-%E5%85%BC%E8%B0%88%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/P2-conversion-function-%E8%BD%AC%E6%8D%A2%E5%87%BD%E6%95%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(上)-基于对象＆面向对象/P12-虚函数与多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/">P12 虚函数与多态</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
+  	<time datetime="2021-06-17T04:41:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P12-虚函数与多态"><a href="#P12-虚函数与多态" class="headerlink" title="P12 虚函数与多态"></a>P12 虚函数与多态</h1>
+        
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/#more">more >></a>
         
       
 
@@ -424,7 +576,311 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/06/15/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P2%20%E5%A4%B4%E6%96%87%E4%BB%B6%E4%B8%8E%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P12-%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E5%A4%9A%E6%80%81/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(上)-基于对象＆面向对象/P11-组合与继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">P11 组合与继承</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/" class="archive-article-date">
+  	<time datetime="2021-06-17T03:51:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P11-组合与继承"><a href="#P11-组合与继承" class="headerlink" title="P11 组合与继承"></a>P11 组合与继承</h1>
+        
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P11-%E7%BB%84%E5%90%88%E4%B8%8E%E7%BB%A7%E6%89%BF/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(上)-基于对象＆面向对象/P10-扩展补充：模板类，函数模板，及其它" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/">P10 扩展补充：模板类，函数模板，及其它</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/" class="archive-article-date">
+  	<time datetime="2021-06-16T16:07:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P10-扩展补充：模板类，函数模板，及其它"><a href="#P10-扩展补充：模板类，函数模板，及其它" class="headerlink" title="P10 扩展补充：模板类，函数模板，及其它"></a>P10 扩展补充：模板类，函数模板，及其它</h1>
+        
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/17/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P10-%E6%89%A9%E5%B1%95%E8%A1%A5%E5%85%85%EF%BC%9A%E6%A8%A1%E6%9D%BF%E7%B1%BB%EF%BC%8C%E5%87%BD%E6%95%B0%E6%A8%A1%E6%9D%BF%EF%BC%8C%E5%8F%8A%E5%85%B6%E5%AE%83/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(上)-基于对象＆面向对象/P9 复习String类的实现过程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">P9 复习String类的实现过程</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2021-06-16T14:39:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P9-复习String类的实现过程"><a href="#P9-复习String类的实现过程" class="headerlink" title="P9 复习String类的实现过程"></a>P9 复习String类的实现过程</h1>
+        
+          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P9%20%E5%A4%8D%E4%B9%A0String%E7%B1%BB%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C++(上)-基于对象＆面向对象/P8-堆、栈与内存管理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">P8 堆、栈与内存管理</a>
+    </h1>
+  
+
+        
+        <a href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/" class="archive-article-date">
+  	<time datetime="2021-06-16T13:13:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="P8-堆、栈与内存管理"><a href="#P8-堆、栈与内存管理" class="headerlink" title="P8 堆、栈与内存管理"></a>P8 堆、栈与内存管理</h1>
+        
+          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">c++（上）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/06/16/C++(%E4%B8%8A)-%E5%9F%BA%E4%BA%8E%E5%AF%B9%E8%B1%A1%EF%BC%86%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/P8-%E5%A0%86%E3%80%81%E6%A0%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">展开全文 >></a>
         </p>
       
 
@@ -456,7 +912,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">&lt; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span>
+      <a class="extend prev" rel="prev" href="/page/5/">&lt; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/">Next &gt;</a>
     </nav>
   
 
@@ -553,6 +1009,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c++（下）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C++新标准-C++11/14(第一讲 语言)</a>
               </li>
              
               <li class="article-tag-list-item">
